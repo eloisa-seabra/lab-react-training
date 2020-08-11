@@ -1,0 +1,25 @@
+.facebook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 3px solid black;
+  max-width: 700px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.details {
+  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 0em;
+}

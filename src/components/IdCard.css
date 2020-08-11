@@ -1,0 +1,10 @@
+.id-card {
+  display: flex;
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+.id-card p {
+  display: flex;
+  flex-direction: column;
+}

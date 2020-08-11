@@ -11,17 +11,21 @@ const CreditCard = ({
   bgColor,
   color,
 }) => {
-  let digitsYear = expirationYear % 100;
-  let num = number.replace(/\d(?=\d{4})/g, '*');
+  const censorCreditCardNumber = (number) => {
+    return `**** **** **** ${number.substring(12, 16)}`;
+  };
+
+  /*   let num = number.replace(/\d(?=\d{4})/g, '*'); */
   return (
     <div
       className="creditcard"
       style={{ backgroundColor: bgColor, color: color }}
     >
       <p>{type}</p>
-      <h1> {num}</h1>
+      <h1> {censorCreditCardNumber(number)}</h1>
       <p>
-        {expirationMonth}/{digitsYear} {bank}
+        Expires: {(expirationMonth < 10 ? '0' : ' ') + expirationMonth}/
+        {expirationYear % 1000} {bank}
       </p>
       <p> {owner}</p>
     </div>
