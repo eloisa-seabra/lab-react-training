@@ -2,12 +2,17 @@ import React from 'react';
 import './FaceBook.css';
 import profiles from '../data/berlin.json';
 
+const countries = profiles
+  .map((profile) => profile.country)
+  .filter(
+    (country, index, originalArray) => originalArray.indexOf(country) === index
+  );
 const FaceBook = () => {
   return (
     <div className="facebook">
       {profiles.map((person) => {
         return (
-          <div className="card">
+          <div key={person.img} className="card">
             <div>
               <img style={{ width: '200px' }} src={person.img} alt="img" />
             </div>
