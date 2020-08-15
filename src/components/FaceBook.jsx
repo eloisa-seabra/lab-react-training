@@ -9,11 +9,11 @@ const countries = profiles
   );
 const FaceBook = () => {
   return (
-    <div className="facebook">
+    <div>
       {profiles.map((person) => {
         return (
-          <div key={person.img} className="card">
-            <div>
+          <div key={person.img} className="facebook">
+            <div className="card">
               <img style={{ width: '200px' }} src={person.img} alt="img" />
             </div>
             <div className="details">

@@ -40,7 +40,7 @@ class SignupPage extends Component {
             value={this.state.email}
             onChange={this.handleInputChange}
           />
-          <div class="valid-feedback">You typed a valid email!</div>
+
           <label htmlFor="password-input">password</label>
           <input
             id="password-input"
